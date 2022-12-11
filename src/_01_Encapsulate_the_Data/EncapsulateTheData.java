@@ -20,6 +20,9 @@ public class EncapsulateTheData {
 			this.itemsReceived = itemsReceived;
 		}
 	}
+	public int getItemsReceived() {
+		return itemsReceived;
+	}
 
 	/*
 	 * degreesTurned must be locked between 0.0 and 360.0 inclusive.
@@ -38,6 +41,9 @@ public class EncapsulateTheData {
 			this.degreesTurned = degreesTurned;
 		}
 	}
+	public double getDegreesTurned() {
+		return degreesTurned;
+	}
 
 	/*
 	 * nomenclature must not contain an empty String.
@@ -47,6 +53,17 @@ public class EncapsulateTheData {
 	 */
 
 	private String nomenclature;
+	public void setNomenclature(String nomenclature){
+		if(nomenclature.isEmpty() == true) {
+			this.nomenclature = " ";
+		} else {
+			this.nomenclature = nomenclature;
+		}
+	}
+		public String getNomenclature() {
+			return nomenclature;
+		}
+	
 
 	/*
 	 * memberObj must not be a String.
@@ -65,5 +82,14 @@ public class EncapsulateTheData {
 	 */
 
 	private Object memberObj;
-
+	public void setMemberObj(Object memberObj){
+    if(memberObj instanceof String) {
+    	this.memberObj = new Object();
+    } else {
+    	this.memberObj = memberObj;
+    }
+}
+	public Object getMemberObj() {
+		return memberObj;
+	}
 }
