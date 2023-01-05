@@ -18,8 +18,15 @@ enum Elements {
 enum StatesOfMatter{
 	
 
-	SOLID, LIQUID, GAS;
-	int celsiusTemp;
+	SOLID(0), LIQUID(25.55), GAS(100);
+	double celsiusTemp;
+	 private StatesOfMatter(double celsiusTemp) {
+			 this.celsiusTemp = celsiusTemp;
+			 }
+	 double convertToFahrenheit() {
+		return (celsiusTemp*9/5)+32;
+		 
+	 }
 }
 
 public class IntroToEnums {
@@ -69,9 +76,11 @@ public class IntroToEnums {
 		// Hint: Return the conversion: F = (C * 9/5) + 32
 
 		// 10. Create a variable of the StatesOfMatter type and initialize it randomly.
-
+Random rand = new Random();
+int ran = rand.nextInt(SLG.length);
+		StatesOfMatter state = SLG[ran];
 		// 11. Print outs both of its temperatures.
-		
+		System.out.println(state.celsiusTemp + " " + state.convertToFahrenheit());
 		// 11. Create a switch statement that switches on the variable you created.
 		// Note: When creating the cases, you can omit the "StatesOfMatter."
 
