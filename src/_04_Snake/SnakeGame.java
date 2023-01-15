@@ -16,12 +16,23 @@ import javax.swing.JPanel;
 import javax.swing.Timer;
 
 public class SnakeGame implements ActionListener, KeyListener {
+public class Location{
+	private int x;
+	private int y;
+	public boolean equals(Location location) {
+		if(x == location.x && y == location.y) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
 
 	/*
 	 * BEFORE YOU START
 	 * 
-	 * 1. Create a Location class with a x and y member variables encapsulated.
-	 * 
+	 * 1. Create a Location class wit-h a x and y member variables encapsulated.
+	 *done
 	 * 2. Create an equals method in Location that takes in a Location and returns
 	 * true if the member variable x and y match the passed in Location's x and y.
 	 * 
@@ -114,8 +125,18 @@ public class SnakeGame implements ActionListener, KeyListener {
 		 * Use a switch statement to determine if an arrow key is pressed, and set the
 		 * snake's direction accordingly.
 		 * 
+		  
+		
 		 * Hint: KeyEvent.VK_UP.
 		 */
+		switch (e) {
+		case value:
+			
+			break;
+
+		default:
+			break;
+		}
 
 	}
 
@@ -171,4 +192,28 @@ public class SnakeGame implements ActionListener, KeyListener {
 
 		panel.repaint();
 	}
+}
+
+@Override
+public void keyPressed(KeyEvent e) {
+	// TODO Auto-generated method stub
+	
+}
+
+@Override
+public void keyReleased(KeyEvent e) {
+	// TODO Auto-generated method stub
+	
+}
+
+@Override
+public void keyTyped(KeyEvent e) {
+	// TODO Auto-generated method stub
+	
+}
+
+@Override
+public void actionPerformed(ActionEvent e) {
+	// TODO Auto-generated method stub
+	
 }

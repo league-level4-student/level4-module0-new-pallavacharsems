@@ -80,10 +80,21 @@ Random rand = new Random();
 int ran = rand.nextInt(SLG.length);
 		StatesOfMatter state = SLG[ran];
 		// 11. Print outs both of its temperatures.
-		System.out.println(state.celsiusTemp + " " + state.convertToFahrenheit());
+		System.out.println("Celsius: " + state.celsiusTemp + " and Farenheit: " + state.convertToFahrenheit());
 		// 11. Create a switch statement that switches on the variable you created.
 		// Note: When creating the cases, you can omit the "StatesOfMatter."
-
+switch (state) {
+case LIQUID:
+	System.out.println("Soda");
+	break;
+case GAS:
+	System.out.println("Pasta");
+	break;
+case SOLID:
+	System.out.println("Popsicles");
+	break;
+	
+}
 		// 12. For each case, print your favorite food or drink that uses that state.
 		// e.g. Gas/Boiling for Pasta, Solid/Ice for Popsicles, Liquid for Soda
 
