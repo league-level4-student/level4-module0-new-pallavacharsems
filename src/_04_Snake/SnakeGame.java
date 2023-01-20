@@ -16,16 +16,7 @@ import javax.swing.JPanel;
 import javax.swing.Timer;
 
 public class SnakeGame implements ActionListener, KeyListener {
-public class Location{
-	private int x;
-	private int y;
-	public boolean equals(Location location) {
-		if(x == location.x && y == location.y) {
-			return true;
-		} else {
-			return false;
-		}
-	}
+
 
 
 	/*
@@ -129,13 +120,21 @@ public class Location{
 		
 		 * Hint: KeyEvent.VK_UP.
 		 */
-		switch (e) {
-		case value:
+		switch (e.getKeyCode()) {
+		case KeyEvent.VK_UP:
+			snake.setDirection(Direction.UP);
+			break;
+		case KeyEvent.VK_DOWN:
+		snake.setDirection(Direction.DOWN);
+		break;
+		case KeyEvent.VK_LEFT:
+		snake.setDirection(Direction.LEFT);
+		break;
+		case KeyEvent.VK_RIGHT:
+		snake.setDirection(Direction.RIGHT);
+		break;
+		
 			
-			break;
-
-		default:
-			break;
 		}
 
 	}
@@ -194,26 +193,7 @@ public class Location{
 	}
 }
 
-@Override
-public void keyPressed(KeyEvent e) {
-	// TODO Auto-generated method stub
-	
-}
 
-@Override
-public void keyReleased(KeyEvent e) {
-	// TODO Auto-generated method stub
-	
-}
 
-@Override
-public void keyTyped(KeyEvent e) {
-	// TODO Auto-generated method stub
-	
-}
 
-@Override
-public void actionPerformed(ActionEvent e) {
-	// TODO Auto-generated method stub
-	
-}
+
