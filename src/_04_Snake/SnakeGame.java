@@ -205,7 +205,7 @@ if(snake.isHeadCollidingWithBody()|| snake.isOutOfBounds()) {
 		 * If the location of the snake's head is equal to the location of the food,
 		 * feed the snake and randomize the food location.
 		 */
-if(snake.getHeadLocation() == foodLocation) {
+if(snake.getHeadLocation().equals(foodLocation)) {
 	snake.feed();
 	randomizeFoodLocation();
 }
